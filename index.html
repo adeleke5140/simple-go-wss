@@ -9,7 +9,7 @@
     <p>On my way to becoming a full-snack engineer</p>  
   </body>
   <script>
-   const p = window.location.protocol === 'https' ? "wss": "ws"
+   const p = window.location.protocol.includes('https') ? "wss": "ws"
    let host = window.location.host || 'localhost:3000'
    let ws = new WebSocket(`${p}://${host}/ws`);
   
